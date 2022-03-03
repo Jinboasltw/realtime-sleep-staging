@@ -5,6 +5,7 @@ from PIL import Image
 import pyqtgraph as pg
 import multiprocessing as mp
 from scipy.signal import detrend
+import platform
 
 pg.setConfigOption('background', 'w')
 pg.setConfigOption('foreground', 'k')
@@ -155,8 +156,7 @@ channel_names = [
 ]
 
 
-if __name__ == '__main__':
-
+if __name__ == '__main__':        
     plot_pipe, plotter_pipe = mp.Pipe()
     send = plot_pipe.send
 

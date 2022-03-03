@@ -42,8 +42,8 @@ warnings.filterwarnings("ignore")
 # Always use https instead of http to ensure security
 server_url = 'https://z3score.com/api/v2'
 # Do not have a key? Request one from contact@neurobit.io
-email = 'demo@neurobit.io'
-key = 'YourAccessKey'
+email = 'zhangjinbo@cibr.ac.cn'
+key = 'SlpVpfn2P8zYL2NEqEPm2xSWSkwTK2DsjJA5VoBrnUw%3D'
 
 # Sleep stages are encoded as:
 stage_keys = {
@@ -134,7 +134,7 @@ data[4,:] = np.asarray(edf_file.readSignal(channel_no['EMG']))
 
 # cannot score the first epoch, so encode it as 9
 auto_scores = [9]
-
+samplig_rate = int(samplig_rate)
 # Blank data
 blank_data = np.zeros((60*samplig_rate))
 

@@ -57,9 +57,8 @@ sound = pygame.mixer.Sound('tmr.wav')
 # Always use https instead of http to ensure security
 server_url = 'https://z3score.com/api/v2'
 # Do not have a key? Request one from contact@neurobit.io
-# Make sure you request access to the real-time module.
-email = 'demo@neurobit.io'
-key = 'YourAccessKey'
+email = 'zhangjinbo@cibr.ac.cn'
+key = 'SlpVpfn2P8zYL2NEqEPm2xSWSkwTK2DsjJA5VoBrnUw%3D'
 
 # Score once every 3 seconds, 3 to 10 seconds is recommended.
 SCORING_FREQUENCY = 3 
@@ -191,6 +190,7 @@ if __name__=="__main__":
     # running_window is exactly 60 seonds long
     # the real-time module operates on 60 seconds (two epochs) of data 
     # to score the latest 30 seconds (one epoch) 
+    sampling_rate=int(sampling_rate)
     length = 60*sampling_rate
     running_window = np.zeros((5,length))
     blank_data = np.zeros((length))

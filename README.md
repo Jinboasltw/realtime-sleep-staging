@@ -35,3 +35,21 @@ We recommend installing Python 3.6 or higher.
 
 For more information contact sales at sales@neurobit.io  
 the information presented here are subject to change without notice. 
+
+
+### Jinbo comment:
+# follow the following steps to prepare the env, I built this based on anaconda
+```bash
+conda create -n z3scores python=3.6.3
+conda activate z3scores
+pip install numpy==1.16.1
+pip install pycfslib pyedflib pebble pillow requests sklearn scipy
+pip install spyder==4.2.5
+pip install rtree
+pip install spyder-kernels==1.10.2
+```
+
+after the prementioned step, you can run `spyder` now (run from the terminal use `spyder &`), open the demo_basic file, do the following change:
+> add `samplig_rate = int(samplig_rate)` after line 136
+
+Now, you should be able to run it, and get results.
